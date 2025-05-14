@@ -19,9 +19,11 @@ export default function Nurturing() {
             <span className="text-amber-800 font-medium">Empowering</span>
             <h2 className="text-3xl md:text-4xl font-bold">Nurturing Compassionate Nurses for Tomorrow</h2>
             <p className="text-gray-700">
-              At Shree Manjunath School of Nursing, we are dedicated to providing high-quality nursing education
-              tailored for rural students. Our mission is to empower the next generation of compassionate nurses through
-              expert training and modern facilities.
+              We  emphasize the importance of practical experience, with our
+              leadership including MD of Pragmatic Marine Services Pvt Ltd, chairman of Pragmatic Institute of Industrial
+              and Marine Safety, and president of Netaji Subhash Chandra Bose Charitable Trust Mayni. Our students gain
+              valuable insights from industry leaders who have worked with ONGC oil field contracts and have experience
+              with Aramco and Weatherford.
             </p>
             <div className="space-y-4">
               <div>
@@ -52,7 +54,7 @@ export default function Nurturing() {
             className="w-full md:w-1/2"
           >
             <img
-              src="/nurturing-image.png"
+              src="/impp.jpg"
               alt="Nursing students learning"
               className="w-full h-auto rounded-lg shadow-lg"
             />
