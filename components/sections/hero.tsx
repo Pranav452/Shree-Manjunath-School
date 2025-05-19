@@ -28,10 +28,8 @@ export default function Hero() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             Join Us in Shaping Future Healthcare Leaders
           </h1>
-          <p className="text-lg mb-8">
-            At Shree Manjunath School of Nursing, we are dedicated to nurturing the next generation of compassionate
-            nurses through quality education and hands-on training. Our commitment to excellence empowers students from
-            rural backgrounds to thrive in the healthcare field.
+          <p className="text-base mb-6">
+            At Shri Manjunath School of Nursing, we nurture the next generation of compassionate nurses through quality education and hands-on training. Our commitment empowers students from rural backgrounds to thrive in healthcare.
           </p>
           <div className="flex flex-wrap gap-4">
             <Button className="bg-white text-black hover:bg-gray-100 transition-colors">Apply</Button>

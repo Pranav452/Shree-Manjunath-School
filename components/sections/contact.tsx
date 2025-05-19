@@ -24,7 +24,7 @@ export default function Contact() {
             <div className="space-y-4">
               <div className="flex items-center gap-2">
                 <span className="font-medium">Email:</span>
-                <span className="text-gray-700">info@shreemanjunath.edu</span>
+                <span className="text-gray-700">netajibose2018@gmail.com</span> 
               </div>
               <div className="flex items-center gap-2">
                 <span className="font-medium">Phone:</span>
@@ -32,7 +32,7 @@ export default function Contact() {
               </div>
               <div className="flex items-center gap-2">
                 <span className="font-medium">Address:</span>
-                <span className="text-gray-700">Khade Complex, Near Nigam Hospital, Vaduj</span>
+                <span className="text-gray-700">Above Niramay Hospital, Dahivadi Road, Vaduj, Pin 415506</span>
               </div>
             </div>
           </motion.div>
@@ -74,6 +74,20 @@ export default function Contact() {
             </form>
           </motion.div>
         </div>
+        
+        {/* Location Map */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="mt-16"
+        >
+          <h3 className="text-2xl font-bold mb-4">Our Location</h3>
+          <div className="w-full h-[400px] rounded-lg overflow-hidden shadow-md">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7606.334336402259!2d74.451338!3d17.594795!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc3dade10b22a7f%3A0xb9555e581f8c8e15!2sVaduj%2C%20Maharashtra%20415506!5e0!3m2!1sen!2sin!4v1747637574082!5m2!1sen!2sin" width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </motion.div>
       </div>
     </section>
   )

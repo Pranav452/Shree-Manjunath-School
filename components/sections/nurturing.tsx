@@ -19,11 +19,10 @@ export default function Nurturing() {
             <span className="text-amber-800 font-medium">Empowering</span>
             <h2 className="text-3xl md:text-4xl font-bold">Nurturing Compassionate Nurses for Tomorrow</h2>
             <p className="text-gray-700">
-              We  emphasize the importance of practical experience, with our
-              leadership including MD of Pragmatic Marine Services Pvt Ltd, chairman of Pragmatic Institute of Industrial
-              and Marine Safety, and president of Netaji Subhash Chandra Bose Charitable Trust Mayni. Our students gain
-              valuable insights from industry leaders who have worked with ONGC oil field contracts and have experience
-              with Aramco and Weatherford.
+              We emphasize the importance of practical experience, with our leadership including <span className="font-bold">Sachin Shamrao Mane</span>, 
+              President and Production Engineer with 9 years of experience at ONGC, and a long-standing association 
+              with the Fire & Safety Institute since 2007. Our students gain valuable insights from industry leaders 
+              who have worked with ONGC oil field contracts and have experience with Aramco and Weatherford.
             </p>
             <div className="space-y-4">
               <div>

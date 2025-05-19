@@ -1,15 +1,43 @@
+'use client'
+
+import { useRouter } from "next/navigation"
 import Link from "next/link"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Facebook, Instagram, Twitter, Linkedin, Youtube } from "lucide-react"
+import { useSmoothScroll } from "@/components/scroll-context"
 
 export default function Footer() {
+  const router = useRouter()
+  const lenis = useSmoothScroll()
+
+  const handleNavigation = (href: string, e: React.MouseEvent) => {
+    if (href.startsWith('http') || href.startsWith('#')) {
+      // External link or anchor, let the default behavior happen
+      return
+    }
+    
+    e.preventDefault()
+    
+    // Use smooth scrolling for internal navigation
+    if (lenis) {
+      // First navigate to the page
+      router.push(href)
+      
+      // Then scroll to top with smooth animation
+      lenis.scrollTo(0, { immediate: false, duration: 1.2 })
+    } else {
+      // Fallback if lenis is not available
+      router.push(href)
+    }
+  }
+
   return (
-    <footer className="bg-gray-900 text-white py-16">
+    <footer className="bg-black text-white py-16">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
-            <h2 className="font-bold mb-6 text-2xl font-script">Logo</h2>
+            <h2 className="font-bold mb-6 text-2xl font-script">Shri Manjunath Nursing</h2>
             <p className="mb-6">Subscribe to our newsletter for the latest updates on features and events.</p>
             <div className="flex gap-2">
               <Input placeholder="Your email here" className="bg-black border-gray-700 text-white" />
@@ -24,29 +52,34 @@ export default function Footer() {
             <h3 className="text-lg font-bold mb-6">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="#about" className="hover:text-amber-400 transition-colors">
+                <a href="/about" className="hover:text-amber-400 transition-colors" onClick={(e) => handleNavigation('/about', e)}>
                   About Us
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="#programs" className="hover:text-amber-400 transition-colors">
+                <a href="/programs" className="hover:text-amber-400 transition-colors" onClick={(e) => handleNavigation('/programs', e)}>
                   Programs
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="#admissions" className="hover:text-amber-400 transition-colors">
+                <a href="/admissions" className="hover:text-amber-400 transition-colors" onClick={(e) => handleNavigation('/admissions', e)}>
                   Admissions
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="#contact" className="hover:text-amber-400 transition-colors">
+                <a href="/contact" className="hover:text-amber-400 transition-colors" onClick={(e) => handleNavigation('/contact', e)}>
                   Contact Us
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="#events" className="hover:text-amber-400 transition-colors">
+                <a href="/events" className="hover:text-amber-400 transition-colors" onClick={(e) => handleNavigation('/events', e)}>
                   Events
-                </Link>
+                </a>
+              </li>
+              <li>
+                <a href="/faculty" className="hover:text-amber-400 transition-colors" onClick={(e) => handleNavigation('/faculty', e)}>
+                  Faculty
+                </a>
               </li>
             </ul>
           </div>
@@ -56,12 +89,12 @@ export default function Footer() {
               <h3 className="text-lg font-bold mb-6">Connect With Us</h3>
               <ul className="space-y-3">
                 <li>
-                  <Link href="#" className="hover:text-amber-400 transition-colors">
+                  <Link href="https://www.facebook.com/shri_manjunath_nursing2024" className="hover:text-amber-400 transition-colors">
                     Facebook Page
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-amber-400 transition-colors">
+                  <Link href="https://www.instagram.com/shri_manjunath_nursing2024" className="hover:text-amber-400 transition-colors">
                     Instagram Feed
                   </Link>
                 </li>
@@ -113,7 +146,7 @@ export default function Footer() {
         
         <div className="border-t border-gray-800 mt-10 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-gray-400">
-            © {new Date().getFullYear()} Shree Manjunath School of Nursing. All rights reserved.
+            © {new Date().getFullYear()} Shri Manjunath School of Nursing. All rights reserved.
           </p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <Link href="#" className="text-sm text-gray-400 hover:text-white transition-colors">

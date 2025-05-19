@@ -37,7 +37,7 @@ export default function GNMProgram() {
               image: "/prg2.png",
               alt: "Eligibility Criteria for G.N.M. Program Admission",
               title: "Eligibility Criteria for G.N.M. Program Admission",
-              description: "Students must have 45% or more in their 12th-grade examinations.",
+              description: "Students must have 40% or more in their 12th-grade examinations.",
               buttonText: "Sign Up"
             },
             {

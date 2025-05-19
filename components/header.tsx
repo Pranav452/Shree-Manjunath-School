@@ -2,23 +2,25 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { motion, AnimatePresence } from "framer-motion"
+import { useSmoothScroll } from "./scroll-context"
 
 const navLinks = [
-  { name: "Home", href: "/" },
-  { name: "About Us", href: "#about" },
-  { name: "Programs", href: "#programs" },
-  { name: "Admissions", href: "#admissions" },
-  { name: "Apply", href: "#apply" },
-  { name: "Contact", href: "#contact" },
+  { name: "About Us", href: "/about" },
+  { name: "Programs", href: "/programs" },
+  { name: "Faculty", href: "/faculty" },
+  { name: "Contact", href: "/contact" },
 ]
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const router = useRouter()
+  const lenis = useSmoothScroll()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,36 +30,54 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  const handleNavigation = (href: string, e: React.MouseEvent) => {
+    e.preventDefault()
+    if (mobileMenuOpen) {
+      setMobileMenuOpen(false)
+    }
+    
+    // Use smooth scrolling for navigation
+    if (lenis) {
+      // First navigate to the page
+      router.push(href)
+      
+      // Then scroll to top with smooth animation
+      lenis.scrollTo(0, { immediate: false, duration: 1.2 })
+    } else {
+      // Fallback if lenis is not available
+      router.push(href)
+    }
+  }
+
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 w-full transition-all duration-300",
+        "sticky top-0 z-50 w-full transition-all duration-300 border-b border-gray-200",
         isScrolled ? "bg-white shadow-md" : "bg-transparent",
       )}
     >
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href="/" className="font-bold text-xl">
-            Shree Manjunath
+            Shri Manjunath School
           </Link>
         </div>
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
-            <Link
+            <a
               key={link.name}
               href={link.href}
+              onClick={(e) => handleNavigation(link.href, e)}
               className="text-sm font-medium hover:text-amber-800 transition-colors"
             >
               {link.name}
-            </Link>
+            </a>
           ))}
         </nav>
         <div className="flex items-center gap-4">
-          <Button variant="outline" size="sm" className="hidden md:flex">
-            Login
-          </Button>
-          <Button size="sm" className="bg-amber-800 hover:bg-amber-900 text-white">
-            Sign Up
+          {/* Only show Get Started button on desktop */}
+          <Button size="sm" className="bg-amber-800 hover:bg-amber-900 text-white hidden md:flex">
+            Get Started
           </Button>
           <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
             {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -77,20 +97,19 @@ export default function Header() {
           >
             <div className="container py-4 flex flex-col space-y-4">
               {navLinks.map((link) => (
-                <Link
+                <a
                   key={link.name}
                   href={link.href}
                   className="text-sm font-medium py-2 hover:text-amber-800 transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={(e) => handleNavigation(link.href, e)}
                 >
                   {link.name}
-                </Link>
+                </a>
               ))}
-              <div className="pt-2 flex flex-col space-y-2">
-                <Button variant="outline" size="sm" className="w-full justify-start">
-                  Login
-                </Button>
-              </div>
+              {/* Add Get Started button to mobile menu */}
+              <Button className="bg-amber-800 hover:bg-amber-900 text-white mt-2 w-full">
+                Get Started
+              </Button>
             </div>
           </motion.div>
         )}
