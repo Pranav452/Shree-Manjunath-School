@@ -28,7 +28,7 @@ export default function AboutPage() {
         </p>
       </section>
       
-      <section>
+      <section className="mb-12">
         <h2 className="text-2xl md:text-3xl font-bold mb-4">Our Values</h2>
         <ul className="list-disc pl-5 space-y-2">
           <li>Excellence in teaching and learning</li>
@@ -38,6 +38,29 @@ export default function AboutPage() {
           <li>Community service</li>
           <li>Inclusivity and diversity</li>
         </ul>
+      </section>
+
+      <section className="mb-12">
+        <h2 className="text-2xl md:text-3xl font-bold mb-6">In The News</h2>
+        <div className="bg-gray-50 p-6 rounded-lg">
+          <div className="aspect-video mb-4">
+            <iframe 
+              className="w-full h-full rounded-lg shadow-lg"
+              src="https://www.youtube.com/embed/p2cBtoKjo_Y"
+              title="Yerala News Channel Coverage"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          </div>
+          <div className="text-left space-y-2 text-sm md:text-base">
+            <div className="mt-4 pt-4 border-t border-gray-300">
+              <p className="font-semibold">संपादक - धनंजय क्षीरसागर</p>
+              <p className="font-semibold">उपसंपादक - शरदराव कदम</p>
+              <p className="italic">वडूज ता. खटाव जि. सातारा</p>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   )
