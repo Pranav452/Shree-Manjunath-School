@@ -99,6 +99,7 @@ export default function TermsOfUse() {
             <p><strong>Shri Manjunath School of Nursing</strong></p>
             <p>Email: netajibose2018@gmail.com, shrimanjunath369@gmail.com</p>
             <p>Phone: +91 7385685431</p>
+            <p>Phone: +91 7385425431</p>
             <p>Address: Above Niramay Hospital, Dahivadi Road, Vaduj, Pin 415506, Maharashtra, India</p>
           </div>
         </section>

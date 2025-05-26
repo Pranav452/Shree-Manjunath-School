@@ -23,15 +23,21 @@ export default function Contact() {
             <h2 className="text-3xl md:text-4xl font-bold">Contact Us</h2>
             <p className="text-gray-700">We're here to answer your questions and assist you.</p>
             <div className="space-y-4">
-              <div className="flex items-center gap-2">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-2">
                 <span className="font-medium">Email:</span>
                 <span className="text-gray-700">netajibose2018@gmail.com</span> 
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-2">
                 <span className="font-medium">Phone:</span>
                 <span className="text-gray-700">+91 7385685431</span>
+                <span className="md:block hidden">/</span>
+                
+              <span className="text-gray-700">+91 7385425431</span>
+              
               </div>
-              <div className="flex items-center gap-2">
+          
+             
+              <div className="flex flex-col sm:flex-row sm:items-center gap-2">
                 <span className="font-medium">Address:</span>
                 <span className="text-gray-700">Above Niramay Hospital, Dahivadi Road, Vaduj, Pin 415506</span>
               </div>

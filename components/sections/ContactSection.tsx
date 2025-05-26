@@ -82,6 +82,7 @@ export default function ContactSection() {
               <div>
                 <h3 className="font-semibold mb-1">Phone</h3>
                 <p className="mb-1">+91 7385685431</p>
+                <p className="mb-1">+91 7385425431</p>
               </div>
             </div>
             
