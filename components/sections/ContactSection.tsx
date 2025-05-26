@@ -1,12 +1,9 @@
 "use client"
 
 import { Phone, Mail, MapPin, Clock, ChevronDown } from "lucide-react"
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
-import { Textarea } from "@/components/ui/textarea"
-import { Checkbox } from "@/components/ui/checkbox"
 import { motion, AnimatePresence } from "framer-motion"
 import { useState } from "react"
+import { ContactForm } from "@/components/ui/ContactForm"
 
 export default function ContactSection() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
@@ -66,82 +63,7 @@ export default function ContactSection() {
             We'd love to hear from you. Please fill out the form below, and we'll get back to you as soon as possible.
           </p>
           
-          <form className="space-y-4">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-sm font-medium mb-2" htmlFor="name">
-                  Full Name
-                </label>
-                <Input 
-                  id="name" 
-                  type="text" 
-                  placeholder="Your full name" 
-                  required 
-                  className="w-full" 
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium mb-2" htmlFor="email">
-                  Email
-                </label>
-                <Input 
-                  id="email" 
-                  type="email" 
-                  placeholder="Your email address" 
-                  required 
-                  className="w-full" 
-                />
-              </div>
-            </div>
-            
-            <div>
-              <label className="block text-sm font-medium mb-2" htmlFor="phone">
-                Phone Number
-              </label>
-              <Input 
-                id="phone" 
-                type="tel" 
-                placeholder="Your phone number" 
-                className="w-full" 
-              />
-            </div>
-            
-            <div>
-              <label className="block text-sm font-medium mb-2" htmlFor="subject">
-                Subject
-              </label>
-              <Input 
-                id="subject" 
-                type="text" 
-                placeholder="Subject of your inquiry" 
-                required 
-                className="w-full" 
-              />
-            </div>
-            
-            <div>
-              <label className="block text-sm font-medium mb-2" htmlFor="message">
-                Message
-              </label>
-              <Textarea 
-                id="message" 
-                placeholder="Your message" 
-                required 
-                className="w-full min-h-[120px]"
-              />
-            </div>
-            
-            <div className="flex items-center gap-2 mt-4">
-              <Checkbox id="terms" />
-              <label htmlFor="terms" className="text-sm">
-                I accept the Terms
-              </label>
-            </div>
-            
-            <Button type="submit" className="w-full sm:w-auto bg-amber-800 hover:bg-amber-900 text-white mt-4">
-              Send Message
-            </Button>
-          </form>
+          <ContactForm />
         </motion.div>
         
         <motion.div
