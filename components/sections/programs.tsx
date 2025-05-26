@@ -108,14 +108,15 @@ export default function Programs() {
             >
               <div className="relative">
                 <h3 className="text-xl font-bold mb-4 relative z-10 bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-                  💼 Job Placement Assistance Across Sectors
+                  💼 Job Placement Guaranteed Across Sectors
                 </h3>
                 <div className="absolute -top-1 -left-2 w-full h-8 bg-gradient-to-r from-blue-100 to-blue-200 rounded-lg opacity-30 -z-10"></div>
               </div>
               <p className="text-gray-700 leading-relaxed">
-                We provide job placement support in major metropolitan cities,
-                including opportunities in government hospitals and the private
-                sector, through our own company network.
+                We provide job placement support in major Metropolitan cities
+                like Bangalore, Mumbai, Chennai, Hyderabad, and Pune, including
+                opportunities in government hospitals and the private sector,
+                through our own company network.
               </p>
             </motion.div>
           </div>

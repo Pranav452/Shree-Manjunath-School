@@ -7,7 +7,7 @@ import Link from "next/link"
 
 export default function Nurturing() {
   return (
-    <section className="py-16 md:py-24 bg-gray-50">
+    <section className="py-16 md:pt-24 md:pb-12 bg-gray-50">
       <div className="container">
         <div className="flex flex-col md:flex-row gap-12 items-center">
           <motion.div

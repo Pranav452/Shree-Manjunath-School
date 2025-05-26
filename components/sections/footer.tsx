@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Facebook, Instagram, Twitter, Linkedin, Youtube } from "lucide-react"
 import { useSmoothScroll } from "@/components/scroll-context"
-
+import Image from "next/image"
 export default function Footer() {
   const router = useRouter()
   const lenis = useSmoothScroll()
@@ -36,8 +36,17 @@ export default function Footer() {
     <footer className="bg-black text-white py-16">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          <div>
-            <h2 className="font-bold mb-6 text-2xl font-script">Shri Manjunath Nursing</h2>
+          <div>  <Link href="/" className="flex items-center gap-2">
+            <Image 
+              src="/logo.jpeg" 
+              alt="School Logo" 
+              width={36} 
+              height={36} 
+              className="mb-2 rounded-lg"
+            />
+            <span className="font-bold text-base md:text-xl">Shri Manjunath School</span>
+          </Link>
+          
             <p className="mb-6">Subscribe to our newsletter for the latest updates on features and events.</p>
             <div className="flex gap-2">
               <Input placeholder="Your email here" className="bg-black border-gray-700 text-white" />

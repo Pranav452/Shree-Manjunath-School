@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
 import { motion } from "framer-motion"
+import { ContactForm } from "@/components/ui/ContactForm"
 
 export default function Contact() {
   return (
@@ -43,35 +44,7 @@ export default function Contact() {
             viewport={{ once: true }}
             className="w-full md:w-1/2"
           >
-            <form className="space-y-4">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-1">
-                  Name
-                </label>
-                <Input id="name" placeholder="Placeholder" />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-1">
-                  Email
-                </label>
-                <Input id="email" type="email" placeholder="Placeholder" />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-1">
-                  Message
-                </label>
-                <Textarea id="message" placeholder="Type your message..." className="min-h-[120px]" />
-              </div>
-              <div className="flex items-center gap-2">
-                <Checkbox id="terms" />
-                <label htmlFor="terms" className="text-sm">
-                  I accept the Terms
-                </label>
-              </div>
-              <Button type="submit" className="w-full bg-amber-800 hover:bg-amber-900 text-white">
-                Submit
-              </Button>
-            </form>
+            <ContactForm />
           </motion.div>
         </div>
         

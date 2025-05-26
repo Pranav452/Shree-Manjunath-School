@@ -7,7 +7,7 @@ import Link from "next/link"
 
 export default function About() {
   return (
-    <section id="about" className="py-16 md:py-24 bg-gray-50">
+    <section id="about" className="py-16 md:pt-24 md:pb-12 bg-gray-50">
       <div className="container">
         <div className="flex flex-col md:flex-row gap-12 items-start">
           <motion.div
@@ -33,6 +33,14 @@ export default function About() {
               infrastructure, and hands-on training ensure that our graduates are well-prepared to meet the healthcare
               needs of their communities.
             </p>
+            <div className="mt-4">
+              <p className="font-medium text-amber-800">Approved by:</p>
+              <ul className="list-disc pl-5 text-gray-700 mt-2 space-y-1">
+                <li>Indian Nursing Council</li>
+                <li>State Government of Maharashtra & Maharashtra Nursing Council</li>
+                <li>Maharashtra State Board of Nursing & Paramedical Education, Mumbai</li>
+              </ul>
+            </div>
             <div className="flex gap-4">
               <Link href="/programs">
                 <Button variant="outline" className="bg-gray-200 hover:bg-gray-300 border-0">

@@ -1,12 +1,11 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
-import { cn } from "@/lib/utils"
-import { motion, AnimatePresence } from "framer-motion"
+import Image from "next/image"
 import { useSmoothScroll } from "./scroll-context"
 
 const navLinks = [
@@ -17,87 +16,67 @@ const navLinks = [
 ]
 
 export default function Header() {
-  const [isScrolled, setIsScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const router = useRouter()
   const lenis = useSmoothScroll()
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
-
   const handleNavigation = (href: string, e: React.MouseEvent) => {
     e.preventDefault()
-    if (mobileMenuOpen) {
-      setMobileMenuOpen(false)
-    }
+    setMobileMenuOpen(false)
     
-    // Use smooth scrolling for navigation
+    router.push(href)
     if (lenis) {
-      // First navigate to the page
-      router.push(href)
-      
-      // Then scroll to top with smooth animation
       lenis.scrollTo(0, { immediate: false, duration: 1.2 })
-    } else {
-      // Fallback if lenis is not available
-      router.push(href)
     }
   }
 
   return (
-    <header
-      className={cn(
-        "sticky top-0 z-50 w-full transition-all duration-300 border-b border-gray-200",
-        isScrolled ? "bg-white shadow-md" : "bg-transparent",
-      )}
-    >
-      <div className="container flex h-16 items-center justify-between">
-        <div className="flex items-center gap-2">
-          <Link href="/" className="font-bold text-xl">
-            Shri Manjunath School
+    <>
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+        <div className="max-w-screen-xl mx-auto px-2 flex h-16 items-center justify-between">
+          <Link href="/" className="flex items-center gap-2">
+            <Image 
+              src="/logo.jpeg" 
+              alt="School Logo" 
+              width={36} 
+              height={36} 
+              className="rounded-full"
+            />
+            <span className="font-bold text-base md:text-xl">Shri Manjunath School</span>
           </Link>
-        </div>
-        <nav className="hidden md:flex items-center gap-6">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              onClick={(e) => handleNavigation(link.href, e)}
-              className="text-sm font-medium hover:text-amber-800 transition-colors"
-            >
-              {link.name}
-            </a>
-          ))}
-        </nav>
-        <div className="flex items-center gap-4">
-          {/* Only show Get Started button on desktop */}
-          <Link href="/contact">
-            <Button size="sm" className="bg-amber-800 hover:bg-amber-900 text-white hidden md:flex">
-              Get Started
-            </Button>
-          </Link>
-          <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+          
+          <nav className="hidden md:flex items-center gap-6">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={(e) => handleNavigation(link.href, e)}
+                className="text-sm font-medium hover:text-amber-800 transition-colors"
+              >
+                {link.name}
+              </a>
+            ))}
+            <Link href="/contact">
+              <Button size="sm" className="bg-amber-800 hover:bg-amber-900 text-white">
+                Get Started
+              </Button>
+            </Link>
+          </nav>
+          
+          <Button 
+            variant="ghost" 
+            size="sm" 
+            className="md:hidden p-1.5" 
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
             {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
         </div>
-      </div>
-
-      {/* Mobile Menu */}
-      <AnimatePresence>
+        
+        {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="md:hidden bg-white border-t"
-          >
-            <div className="container py-4 flex flex-col space-y-4">
+          <div className="md:hidden bg-white border-t shadow-md">
+            <div className="max-w-screen-xl mx-auto px-4 py-4 flex flex-col space-y-4">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
@@ -108,16 +87,17 @@ export default function Header() {
                   {link.name}
                 </a>
               ))}
-              {/* Add Get Started button to mobile menu */}
               <Link href="/contact" className="w-full">
                 <Button className="bg-amber-800 hover:bg-amber-900 text-white mt-2 w-full">
                   Get Started
                 </Button>
               </Link>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </header>
+      </header>
+      {/* Spacer to prevent content from hiding under fixed header */}
+      <div className="h-16"></div>
+    </>
   )
 }
