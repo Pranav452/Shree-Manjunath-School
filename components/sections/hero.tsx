@@ -26,14 +26,14 @@ export default function Hero() {
           className="max-w-xl text-white"
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Join Us in Shaping Future Healthcare Leaders
+            Transform Your Passion into a Noble Nursing Career
           </h1>
           <p className="text-base mb-6">
             At Shri Manjunath School of Nursing, we nurture the next generation of compassionate nurses through quality education and hands-on training. Our commitment empowers students from rural backgrounds to thrive in healthcare.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Button className="bg-white text-black hover:bg-gray-100 transition-colors">Apply</Button>
-            <Button variant="outline" className=" bg-black text-white  border-gray-800  hover:bg-white hover:text-black transition-colors">
+            <Button className="bg-amber-800 text-white hover:bg-amber-900 transition-colors">Apply</Button>
+            <Button variant="outline" className=" bg-black text-white border-gray-800 ">
               Learn More →
             </Button>
           </div>
