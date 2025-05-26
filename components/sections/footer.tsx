@@ -44,7 +44,7 @@ export default function Footer() {
               <Button className="bg-black hover:bg-gray-800 transition-colors">Join</Button>
             </div>
             <p className="text-xs mt-2 text-gray-400">
-              By subscribing, you consent to our Privacy Policy and agree to receive updates.
+              By subscribing, you consent to our <Link href="/policies/privacy-policy" className="hover:underline">Privacy Policy</Link> and agree to receive updates.
             </p>
           </div>
           
@@ -61,24 +61,16 @@ export default function Footer() {
                   Programs
                 </a>
               </li>
-              <li>
-                <a href="/admissions" className="hover:text-amber-400 transition-colors" onClick={(e) => handleNavigation('/admissions', e)}>
-                  Admissions
-                </a>
-              </li>
+            
               <li>
                 <a href="/contact" className="hover:text-amber-400 transition-colors" onClick={(e) => handleNavigation('/contact', e)}>
                   Contact Us
                 </a>
               </li>
-              <li>
-                <a href="/events" className="hover:text-amber-400 transition-colors" onClick={(e) => handleNavigation('/events', e)}>
-                  Events
-                </a>
-              </li>
+            
               <li>
                 <a href="/faculty" className="hover:text-amber-400 transition-colors" onClick={(e) => handleNavigation('/faculty', e)}>
-                  Faculty
+                  Board Members
                 </a>
               </li>
             </ul>
@@ -98,21 +90,7 @@ export default function Footer() {
                     Instagram Feed
                   </Link>
                 </li>
-                <li>
-                  <Link href="#" className="hover:text-amber-400 transition-colors">
-                    Twitter Profile
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-amber-400 transition-colors">
-                    LinkedIn Page
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-amber-400 transition-colors">
-                    YouTube Channel
-                  </Link>
-                </li>
+                
               </ul>
             </div>
             
@@ -127,10 +105,7 @@ export default function Footer() {
                   <Instagram className="h-5 w-5" />
                   <span>Instagram</span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <Twitter className="h-5 w-5" />
-                  <span>X</span>
-                </li>
+                
                 <li className="flex items-center gap-3">
                   <Linkedin className="h-5 w-5" />
                   <span>LinkedIn</span>
@@ -149,13 +124,13 @@ export default function Footer() {
             © {new Date().getFullYear()} Shri Manjunath School of Nursing. All rights reserved.
           </p>
           <div className="flex gap-6 mt-4 md:mt-0">
-            <Link href="#" className="text-sm text-gray-400 hover:text-white transition-colors">
+            <Link href="/policies/privacy-policy" className="text-sm text-gray-400 hover:text-white transition-colors">
               Privacy Policy
             </Link>
-            <Link href="#" className="text-sm text-gray-400 hover:text-white transition-colors">
+            <Link href="/policies/terms-of-use" className="text-sm text-gray-400 hover:text-white transition-colors">
               Terms of Use
             </Link>
-            <Link href="#" className="text-sm text-gray-400 hover:text-white transition-colors">
+            <Link href="/policies/cookie-policy" className="text-sm text-gray-400 hover:text-white transition-colors">
               Cookie Policy
             </Link>
           </div>

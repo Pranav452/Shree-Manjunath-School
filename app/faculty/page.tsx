@@ -51,7 +51,7 @@ const facultyMembers: FacultyMember[] = [
     qualifications: ["MBBS", "DCH"],
   },
   {
-    name: "Dr. Vijay Anil Jagdale",
+    name: "Dr. Viraj Anil Jagdale",
     position: "Director",
     qualifications: ["BAMS", "PEDIEMS"],
   },

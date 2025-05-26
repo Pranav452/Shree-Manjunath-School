@@ -1,13 +1,55 @@
 "use client"
 
-import { Phone, Mail, MapPin, Clock } from "lucide-react"
+import { Phone, Mail, MapPin, Clock, ChevronDown } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
+import { useState } from "react"
 
 export default function ContactSection() {
+  const [openFAQ, setOpenFAQ] = useState<number | null>(null)
+
+  const toggleFAQ = (index: number) => {
+    setOpenFAQ(openFAQ === index ? null : index)
+  }
+
+  const faqs = [
+    {
+      question: "What are the admission requirements?",
+      answer: "Please visit our Admissions page for detailed information about eligibility criteria and the application process."
+    },
+    {
+      question: "Is there hostel facility available?",
+      answer: "Yes, we provide separate hostel facilities for male and female students with all necessary amenities."
+    },
+    {
+      question: "Do you offer scholarships?",
+      answer: "We offer merit-based scholarships for deserving students. Please contact the admissions office for more details."
+    },
+    {
+      question: "What nursing programs do you offer?",
+      answer: "We offer various nursing programs including GNM (General Nursing and Midwifery) and other specialized nursing courses. Please check our Programs page for complete details."
+    },
+    {
+      question: "What is the duration of the nursing courses?",
+      answer: "The duration varies by program. Our GNM program is typically 3.5 years, while other specialized courses may have different durations. Please contact our admissions office for specific information."
+    },
+    {
+      question: "Are there any placement opportunities after graduation?",
+      answer: "Yes, we have a dedicated placement cell that helps our graduates find suitable employment opportunities in hospitals, clinics, and healthcare institutions across the country."
+    },
+    {
+      question: "What facilities are available on campus?",
+      answer: "Our campus features modern classrooms, well-equipped laboratories, a comprehensive library, computer lab, recreation areas, and clinical practice facilities to ensure a complete learning experience."
+    },
+    {
+      question: "How can I apply for admission?",
+      answer: "You can apply online through our website or visit our campus to collect and submit the application form. All necessary documents and application fees must be submitted before the deadline."
+    }
+  ]
+
   return (
     <>
       <h1 className="text-4xl md:text-5xl font-bold mb-8">Contact Us</h1>
@@ -189,18 +231,41 @@ export default function ContactSection() {
       >
         <h2 className="text-2xl md:text-3xl font-bold mb-6">Frequently Asked Questions</h2>
         <div className="space-y-4">
-          <div className="border rounded-lg p-4">
-            <h3 className="font-bold mb-2">What are the admission requirements?</h3>
-            <p>Please visit our Admissions page for detailed information about eligibility criteria and the application process.</p>
-          </div>
-          <div className="border rounded-lg p-4">
-            <h3 className="font-bold mb-2">Is there hostel facility available?</h3>
-            <p>Yes, we provide separate hostel facilities for male and female students with all necessary amenities.</p>
-          </div>
-          <div className="border rounded-lg p-4">
-            <h3 className="font-bold mb-2">Do you offer scholarships?</h3>
-            <p>We offer merit-based scholarships for deserving students. Please contact the admissions office for more details.</p>
-          </div>
+          {faqs.map((faq, index) => (
+            <div key={index} className="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm">
+              <button
+                onClick={() => toggleFAQ(index)}
+                className="w-full p-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
+              >
+                <h3 className="font-bold text-gray-900">{faq.question}</h3>
+                <motion.div
+                  animate={{ rotate: openFAQ === index ? 180 : 0 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                >
+                  <ChevronDown className="h-5 w-5 text-gray-500" />
+                </motion.div>
+              </button>
+              <AnimatePresence>
+                {openFAQ === index && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ 
+                      duration: 0.3, 
+                      ease: "easeInOut",
+                      opacity: { duration: 0.2 }
+                    }}
+                    className="overflow-hidden"
+                  >
+                    <div className="p-4 pt-0 border-t border-gray-100">
+                      <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          ))}
         </div>
       </motion.section>
     </>
