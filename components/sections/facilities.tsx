@@ -94,7 +94,7 @@ export default function Facilities() {
                 Learn More
               </Button>
               <Button className="bg-amber-800 hover:bg-amber-900 text-white flex items-center gap-1">
-                Sign Up <ArrowRight className="h-4 w-4" />
+                Apply  <ArrowRight className="h-4 w-4" />
               </Button>
             </div>
           </motion.div>
