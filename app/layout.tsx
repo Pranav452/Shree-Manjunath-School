@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import ScrollContext from "@/components/scroll-context"
 import Header from "@/components/header"
 import Footer from "@/components/sections/footer"
+import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -34,6 +35,7 @@ export default function RootLayout({
             </div>
           </ScrollContext>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   )
