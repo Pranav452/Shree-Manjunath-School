@@ -3,10 +3,10 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import { motion } from "framer-motion"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export default function PremierFacilities() {
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null)
+  const [hoveredCard, setHoveredCard] = useState<number | null>(0)
 
   const facilities = [
     {
@@ -23,10 +23,9 @@ export default function PremierFacilities() {
     },
     {
       title: "Innovative Technology for Training",
-      description: "Computer labs and modern simulation labs enhance learning with cutting-edge equipment.",
+      description: "Computer labs and modern simulation labs enhance learning with  equipment.",
       image: "/prg3.png",
       cta: "Join Us",
-      label: "Facilities",
     },
   ]
 
@@ -45,70 +44,65 @@ export default function PremierFacilities() {
           <p className="text-gray-700">Equipping Students for Success</p>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
-        >
+        <div className="flex flex-wrap -mx-4">
           {facilities.map((facility, index) => (
-            <motion.div
-              key={index}
-              className="bg-white p-10 rounded-lg shadow-md h-full flex flex-col relative overflow-hidden"
-              onHoverStart={() => setHoveredCard(index)}
-              onHoverEnd={() => setHoveredCard(null)}
-              whileHover={{ y: -5 }}
-              transition={{ duration: 0.3 }}
-            >
-              <div
-                className={`transition-all duration-500 ease-in-out ${
-                  hoveredCard === index ? "opacity-100 max-h-48 mb-4" : "opacity-0 max-h-0"
-                }`}
+            <div key={index} className="w-full md:w-1/3 px-4 mb-8">
+              <motion.div
+                className="bg-white p-10 rounded-lg shadow-md flex flex-col relative overflow-hidden h-auto"
+                onHoverStart={() => setHoveredCard(index)}
+                onHoverEnd={() => setHoveredCard(index === 0 ? 0 : null)}
+                whileHover={{ y: -5 }}
+                transition={{ duration: 0.3 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
               >
-                <img
-                  src={facility.image || "/placeholder.svg"}
-                  alt={facility.title}
-                  className="w-full h-auto rounded-lg object-cover"
-                />
-              </div>
-
-              <div
-                className={`transition-all duration-500 ease-in-out ${hoveredCard === index ? "transform translate-y-0" : ""}`}
-              >
-                <div className="bg-black p-2 rounded w-fit mb-4">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="text-white"
-                  >
-                    <path
-                      d="M21 16.0002V7.9992L12 2L3 7.9992V16.0002L12 22L21 16.0002Z"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+                <div
+                  className={`transition-all duration-500 ease-in-out ${
+                    hoveredCard === index ? "opacity-100 h-48 mb-4" : "opacity-0 h-0 overflow-hidden"
+                  }`}
+                >
+                  <img
+                    src={facility.image || "/placeholder.svg"}
+                    alt={facility.title}
+                    className="w-full h-full rounded-lg object-cover"
+                  />
                 </div>
 
-                {facility.label && <h4 className="text-sm font-medium text-gray-500 mb-1">{facility.label}</h4>}
+                <div className="transition-all duration-500 ease-in-out">
+                  <div className="bg-black p-2 rounded w-fit mb-4">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="text-white"
+                    >
+                      <path
+                        d="M21 16.0002V7.9992L12 2L3 7.9992V16.0002L12 22L21 16.0002Z"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </div>
 
-                <h3 className="text-xl font-bold mb-3">{facility.title}</h3>
-                <p className="text-gray-700 mb-4">{facility.description}</p>
 
-                <div className="mt-auto">
-                  <Button variant="link" className="flex items-center gap-1 p-0 h-auto text-black hover:text-amber-800">
-                    {facility.cta} <ArrowRight className="h-4 w-4" />
-                  </Button>
+                  <h3 className="text-xl font-bold mb-3">{facility.title}</h3>
+                  <p className="text-gray-700 mb-4">{facility.description}</p>
+
+                  <div className="mt-2">
+                    <Button variant="link" className="flex items-center gap-1 p-0 h-auto text-black hover:text-amber-800">
+                      {facility.cta} <ArrowRight className="h-4 w-4" />
+                    </Button>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   )
