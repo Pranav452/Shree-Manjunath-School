@@ -41,7 +41,7 @@ export default function Footer() {
             <p className="mb-6">Subscribe to our newsletter for the latest updates on features and events.</p>
             <div className="flex gap-2">
               <Input placeholder="Your email here" className="bg-black border-gray-700 text-white" />
-              <Button className="bg-black hover:bg-gray-800 transition-colors">Join</Button>
+              <Button className="bg-gray-800 transition-colors border-gray-700 dark:border-gray-300">Join</Button>
             </div>
             <p className="text-xs mt-2 text-gray-400">
               By subscribing, you consent to our <Link href="/policies/privacy-policy" className="hover:underline">Privacy Policy</Link> and agree to receive updates.

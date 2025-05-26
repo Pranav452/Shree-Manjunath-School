@@ -42,6 +42,57 @@ export default function Programs() {
             </div>
           </motion.div>
         </div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mt-24"
+        >
+          <div className="text-center mb-12">
+            <span className="text-amber-800 font-medium bg-amber-100 px-4 py-1 rounded-full">Growth Opportunities</span>
+            <h2 className="text-3xl md:text-4xl font-bold mt-3">What's Next</h2>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="space-y-4"
+            >
+              <div className="relative">
+                <h3 className="text-xl font-bold mb-4 relative z-10 bg-gradient-to-r from-amber-600 to-amber-800 bg-clip-text text-transparent">
+                  🌍 Master Spoken English and Foreign Languages
+                </h3>
+                <div className="absolute -top-1 -left-2 w-full h-8 bg-gradient-to-r from-amber-100 to-amber-200 rounded-lg opacity-30 -z-10"></div>
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                We currently offer English speaking classes and will soon expand to German, French, Russian, and Arabic training to help students prepare for international education and job opportunities.
+              </p>
+            </motion.div>
+            
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="space-y-4"
+            >
+              <div className="relative">
+                <h3 className="text-xl font-bold mb-4 relative z-10 bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+                  💼 Job Placement Assistance Across Sectors
+                </h3>
+                <div className="absolute -top-1 -left-2 w-full h-8 bg-gradient-to-r from-blue-100 to-blue-200 rounded-lg opacity-30 -z-10"></div>
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                We provide job placement support in major metropolitan cities, including opportunities in government hospitals and the private sector, through our own company network.
+              </p>
+            </motion.div>
+          </div>
+        </motion.div>
       </div>
     </section>
   )
