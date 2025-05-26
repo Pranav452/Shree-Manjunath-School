@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Programs() {
   return (
@@ -44,18 +45,22 @@ export default function Programs() {
               patients in both urban and rural healthcare settings.
             </p>
             <div className="flex gap-4">
-              <Button
-                variant="outline"
-                className="bg-gray-200 hover:bg-gray-300 border-0"
-              >
-                Learn More
-              </Button>
-              <Button
-                variant="link"
-                className="flex items-center gap-1 text-black hover:text-amber-800 p-0 h-auto"
-              >
-                Contact <ArrowRight className="h-4 w-4" />
-              </Button>
+              <Link href="/programs">
+                <Button
+                  variant="outline"
+                  className="bg-gray-200 hover:bg-gray-300 border-0"
+                >
+                  Learn More
+                </Button>
+              </Link>
+              <Link href="/contact">
+                <Button
+                  variant="link"
+                  className="flex items-center gap-1 text-black hover:text-amber-800 p-0 h-auto mt-2"
+                >
+                  Contact <ArrowRight className="h-4 w-4" />
+                </Button>
+              </Link>
             </div>
           </motion.div>
         </div>

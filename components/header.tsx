@@ -76,9 +76,11 @@ export default function Header() {
         </nav>
         <div className="flex items-center gap-4">
           {/* Only show Get Started button on desktop */}
-          <Button size="sm" className="bg-amber-800 hover:bg-amber-900 text-white hidden md:flex">
-            Get Started
-          </Button>
+          <Link href="/contact">
+            <Button size="sm" className="bg-amber-800 hover:bg-amber-900 text-white hidden md:flex">
+              Get Started
+            </Button>
+          </Link>
           <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
             {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
@@ -107,9 +109,11 @@ export default function Header() {
                 </a>
               ))}
               {/* Add Get Started button to mobile menu */}
-              <Button className="bg-amber-800 hover:bg-amber-900 text-white mt-2 w-full">
-                Get Started
-              </Button>
+              <Link href="/contact" className="w-full">
+                <Button className="bg-amber-800 hover:bg-amber-900 text-white mt-2 w-full">
+                  Get Started
+                </Button>
+              </Link>
             </div>
           </motion.div>
         )}

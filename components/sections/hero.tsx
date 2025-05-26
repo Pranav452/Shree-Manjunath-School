@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
+import Link from "next/link"
 
 export default function Hero() {
   return (
@@ -32,10 +33,14 @@ export default function Hero() {
             At Shri Manjunath School of Nursing, we nurture the next generation of compassionate nurses through quality education and hands-on training. Our commitment empowers students from rural backgrounds to thrive in healthcare.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Button className="bg-amber-800 text-white hover:bg-amber-900 transition-colors">Apply</Button>
-            <Button variant="outline" className=" bg-black text-white border-gray-800 ">
-              Learn More →
-            </Button>
+            <Link href="/contact">
+              <Button className="bg-amber-800 text-white hover:bg-amber-900 transition-colors">Apply</Button>
+            </Link>
+            <Link href="/programs">
+              <Button variant="outline" className=" bg-black text-white border-gray-800 ">
+                Learn More →
+              </Button>
+            </Link>
           </div>
         </motion.div>
       </div>

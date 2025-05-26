@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import { motion } from "framer-motion"
+import Link from "next/link"
 
 export default function Facilities() {
   return (
@@ -90,12 +91,16 @@ export default function Facilities() {
               </div>
             </div>
             <div className="flex gap-4">
-              <Button variant="outline" className="bg-gray-200 hover:bg-gray-300 border-0">
-                Learn More
-              </Button>
-              <Button className="bg-amber-800 hover:bg-amber-900 text-white flex items-center gap-1">
-                Apply  <ArrowRight className="h-4 w-4" />
-              </Button>
+              <Link href="/programs">
+                <Button variant="outline" className="bg-gray-200 hover:bg-gray-300 border-0">
+                  Learn More
+                </Button>
+              </Link>
+              <Link href="/contact">
+                <Button className="bg-amber-800 hover:bg-amber-900 text-white flex items-center gap-1">
+                  Apply  <ArrowRight className="h-4 w-4" />
+                </Button>
+              </Link>
             </div>
           </motion.div>
         </div>

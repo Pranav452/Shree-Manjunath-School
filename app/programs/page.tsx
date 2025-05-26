@@ -3,9 +3,11 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import { motion } from "framer-motion"
+import CTA from "@/components/sections/cta"
 
 export default function ProgramsPage() {
   return (
+    <>
     <main className="container mx-auto px-6 py-12">
       <h1 className="text-4xl md:text-5xl font-bold mb-8">Our Programs</h1>
       
@@ -92,6 +94,9 @@ export default function ProgramsPage() {
           </div>
         </div>
       </section>
+   
     </main>
+       <CTA />
+       </>
   )
 } 

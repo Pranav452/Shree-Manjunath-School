@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Admissions | Shri Manjunath School of Nursing",
@@ -34,7 +35,9 @@ export default function AdmissionsPage() {
       <div className="bg-blue-50 p-6 rounded-lg">
         <h3 className="text-xl font-bold mb-4">Ready to Apply?</h3>
         <p className="mb-4">For more information about our admissions process, please contact us.</p>
-        <button className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-md transition-colors">Contact Admissions</button>
+        <Link href="/contact">
+          <button className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-md transition-colors">Contact Admissions</button>
+        </Link>
       </div>
     </main>
   )

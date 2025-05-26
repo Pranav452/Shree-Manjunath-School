@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import { motion } from "framer-motion"
+import Link from "next/link"
 
 export default function GNMProgram() {
   return (
@@ -64,9 +65,11 @@ export default function GNMProgram() {
                 <p className="text-gray-700 mb-6">
                   {item.description}
                 </p>
-                <Button variant="link" className="flex items-center gap-1 mx-auto text-black hover:text-amber-800">
-                  {item.buttonText} <ArrowRight className="h-4 w-4" />
-                </Button>
+                <Link href={item.buttonText === "Learn More" ? "/programs" : "/contact"}>
+                  <Button variant="link" className="flex items-center gap-1 mx-auto text-black hover:text-amber-800">
+                    {item.buttonText} <ArrowRight className="h-4 w-4" />
+                  </Button>
+                </Link>
               </div>
             </motion.div>
           ))}
