@@ -16,15 +16,21 @@ export default function AboutPage() {
           Shri Manjunath School of Nursing was established with a vision to create healthcare professionals who combine technical excellence with compassionate care. 
           Founded in 2024-25, our institution has grown to become a leading center for nursing education in the region, addressing the critical need for skilled nursing professionals.
         </p>
-        <p className="mb-4">
-          With state-of-the-art facilities and experienced faculty, we are committed to providing our students with the knowledge, skills, and values needed to excel in the field of nursing. Our campus features modern classrooms, well-equipped laboratories, a comprehensive library, and clinical practice facilities to ensure a complete learning experience.
-        </p>
+       
         <p className="mb-4">
           Under the leadership of our dedicated board members, including our President Sachin Shamrao Mane and Secretary Monica Sachin Mane, we have developed a curriculum that meets international standards while addressing local healthcare needs. Our programs are designed to prepare students for the challenges of modern healthcare environments.
         </p>
         <p>
           We take pride in our strong connections with healthcare institutions across Maharashtra, providing our students with valuable clinical exposure and internship opportunities. As we continue to grow, we remain focused on our founding principles of excellence, ethics, and empathy in nursing education.
         </p>
+        <div className="mt-4">
+              <p className="font-medium text-amber-800">Approved by:</p>
+              <ul className="list-disc pl-5 text-gray-700 mt-2 space-y-1">
+                <li>Indian Nursing Council</li>
+                <li>State Government of Maharashtra & Maharashtra Nursing Council</li>
+                <li>Maharashtra State Board of Nursing & Paramedical Education, Mumbai</li>
+              </ul>
+            </div>
       </section>
       <section className="mb-12">
         <h2 className="text-2xl md:text-3xl font-bold mb-6">In The News</h2>
@@ -66,6 +72,7 @@ export default function AboutPage() {
         <p>
           To develop competent, compassionate, and ethically sound nursing professionals who contribute positively to healthcare delivery and advancement in India and globally.
         </p>
+        
       </section>
 
      
