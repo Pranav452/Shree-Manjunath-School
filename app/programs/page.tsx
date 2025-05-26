@@ -37,7 +37,7 @@ export default function ProgramsPage() {
             <h3 className="text-lg font-semibold mb-2">Duration:</h3>
             <p className="mb-4">The program is conducted over a period of 3 years, divided into six semesters.</p>
             <h3 className="text-lg font-semibold mb-2">Eligibility Criteria:</h3>
-            <p className="mb-4">Candidates must have completed their 10+2 education with a minimum of 40% marks in Science (Physics, Chemistry, Biology) and English.</p>
+            <p className="mb-4">Candidates must have completed their 10+2 education with a minimum of 40% marks in Science, Arts, Commerce, MCBC, (CET not required)</p>
             <h3 className="text-lg font-semibold mb-2">Career Opportunities:</h3>
             <p className="mb-4">Graduates can pursue careers in hospitals, clinics, community health organizations, and educational institutions, with opportunities for further specialization in various nursing fields.</p>
           </motion.div>

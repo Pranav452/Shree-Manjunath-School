@@ -14,7 +14,7 @@ export default function AboutPage() {
         <h2 className="text-2xl md:text-3xl font-bold mb-4">Our Story</h2>
         <p className="mb-4">
           Shri Manjunath School of Nursing was established with a vision to create healthcare professionals who combine technical excellence with compassionate care. 
-          Founded in 2010, our institution has grown to become a leading center for nursing education.
+          Founded in 2024-25, our institution has grown to become a leading center for nursing education.
         </p>
         <p>
           With state-of-the-art facilities and experienced faculty, we are committed to providing our students with the knowledge, skills, and values needed to excel in the field of nursing.

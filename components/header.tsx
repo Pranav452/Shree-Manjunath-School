@@ -12,7 +12,7 @@ import { useSmoothScroll } from "./scroll-context"
 const navLinks = [
   { name: "About Us", href: "/about" },
   { name: "Programs", href: "/programs" },
-  { name: "Faculty", href: "/faculty" },
+  { name: "Board Members", href: "/faculty" },
   { name: "Contact", href: "/contact" },
 ]
 

@@ -2,8 +2,8 @@ import { Metadata } from "next"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 export const metadata: Metadata = {
-  title: "Faculty | Shri Manjunath School of Nursing",
-  description: "Meet our experienced and dedicated faculty members",
+  title: "Board Members | Shri Manjunath School of Nursing",
+  description: "Meet our experienced and dedicated Board members",
 }
 
 type FacultyMember = {
@@ -19,17 +19,14 @@ const facultyMembers: FacultyMember[] = [
     name: "Sachin Shamrao Mane",
     position: "President",
     qualifications: ["Production Engineer"],
-    work: ["ONGC (9 years)", "Fire & Safety Institute (Since 2007)"],
+    work: ["ONGC (10 years)", "Fire & Safety Institute (Since 2007)"],
   },
+
   {
-    name: "Hirabai Shamrao Mane",
-    position: "Vice President",
-    qualifications: [],
-  },
-  {
-    name: "Monica Sachin Mane",
-    position: "Secretary",
-    qualifications: ["M.Sc (Microbiology)"],
+    name: "Moh. Irfan Ali Sheikh",
+    position: "Director",
+    qualifications: ["B.Sc"],
+    work: ["Working in Abu Dhabi (UAE)"],
   },
   {
     name: "Baburao Hatiba Mane",
@@ -40,8 +37,13 @@ const facultyMembers: FacultyMember[] = [
   {
     name: "Shrikant Dipak Sathe",
     position: "Director",
-    qualifications: ["Diploma in Fire & Safety"],
-    work: ["Safety Officer (Vita Nagarpalika)"],
+    qualifications: ["Advanced Diploma in Fire & Safety"],
+    work: ["Chief Fire Officer (Vita Nagarpalika)"],
+  },
+  {
+    name: "Monica Sachin Mane",
+    position: "Secretary",
+    qualifications: ["M.Sc (Microbiology)"],
   },
   {
     name: "Dr. Mahesh Jagannath Kakade",
@@ -55,7 +57,7 @@ const facultyMembers: FacultyMember[] = [
   },
   {
     name: "Bharati Harish Mane",
-    position: "Director",
+    position: "Ex-Manager",
     qualifications: ["M.Com"],
   },
   {
@@ -66,24 +68,24 @@ const facultyMembers: FacultyMember[] = [
   {
     name: "Dadaso Mauti Pisal",
     position: "Director",
-    qualifications: ["B.Sc"],
+    qualifications: ["B.Sc in Agriculture"],
   },
+
   {
-    name: "Moh. Irfan Ali Sheikh",
-    position: "Director",
-    qualifications: ["B.Sc"],
-    work: ["Work in Abu Dhabi (UAE)"],
+    name: "Hirabai Shamrao Mane",
+    position: "Vice President",
+    qualifications: [],
   },
 ];
 
 export default function FacultyPage() {
   return (
     <main className="container mx-auto px-6 py-12">
-      <h1 className="text-4xl md:text-5xl font-bold mb-8">Our Faculty Members</h1>
+      <h1 className="text-4xl md:text-5xl font-bold mb-8">Our Board Members</h1>
       
       <p className="text-lg mb-10">
-        Our faculty members bring a wealth of knowledge and experience to provide the highest quality of nursing education.
-        Each faculty member is committed to supporting our students in their journey to becoming skilled nursing professionals.
+        Our Board members bring a wealth of knowledge and experience to provide the highest quality of nursing education.
+        Each Board member is committed to supporting our students in their journey to becoming skilled nursing professionals.
       </p>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
