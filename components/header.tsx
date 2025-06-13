@@ -42,7 +42,7 @@ export default function Header() {
               height={36} 
               className="rounded-full"
             />
-            <span className="font-bold text-base md:text-xl">Shri Manjunath School</span>
+            <span className="font-bold text-base md:text-xl">Shri Manjunath School, Vaduj</span>
           </Link>
           
           <nav className="hidden md:flex items-center gap-6">

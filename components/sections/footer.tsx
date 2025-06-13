@@ -44,7 +44,7 @@ export default function Footer() {
               height={36} 
               className="mb-2 rounded-lg"
             />
-            <span className="font-bold text-base md:text-xl">Shri Manjunath School</span>
+            <span className="font-bold text-base md:text-xl">Shri Manjunath School, Vaduj</span>
           </Link>
           
             <p className="mb-6">Subscribe to our newsletter for the latest updates on features and events.</p>
