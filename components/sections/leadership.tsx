@@ -28,7 +28,7 @@ export default function Leadership() {
             className="w-full md:w-1/2"
           >
             <p className="text-gray-700">
-              At Shri Manjunath School of Nursing, we are dedicated to shaping the future of healthcare through
+              At Shri Manjunath School of Nursing, Vaduj, we are dedicated to shaping the future of healthcare through
               exceptional nursing education. Our leadership team, which includes experienced professionals from various
               healthcare sectors, is committed to fostering an environment of innovation and excellence. We strive to
               empower students with the skills and knowledge necessary to excel in their nursing careers and make a

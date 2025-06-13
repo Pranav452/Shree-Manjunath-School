@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Cookie Policy | Shri Manjunath School of Nursing',
-  description: 'Cookie Policy for Shri Manjunath School of Nursing',
+  title: 'Cookie Policy | Shri Manjunath School of Nursing, Vaduj',
+  description: 'Cookie Policy for Shri Manjunath School of Nursing, Vaduj',
 };
 
 export default function CookiePolicy() {
@@ -15,7 +15,7 @@ export default function CookiePolicy() {
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">Introduction</h2>
           <p>
-            This Cookie Policy explains how Shri Manjunath School of Nursing ("we", "us", or "our") uses cookies and similar technologies to recognize you when you visit our website. It explains what these technologies are and why we use them, as well as your rights to control our use of them.
+            This Cookie Policy explains how Shri Manjunath School of Nursing, Vaduj ("we", "us", or "our") uses cookies and similar technologies to recognize you when you visit our website. It explains what these technologies are and why we use them, as well as your rights to control our use of them.
           </p>
         </section>
         
@@ -25,7 +25,7 @@ export default function CookiePolicy() {
             Cookies are small data files that are placed on your computer or mobile device when you visit a website. Cookies are widely used by website owners to make their websites work, or work more efficiently, as well as to provide reporting information.
           </p>
           <p className="mt-4">
-            Cookies set by the website owner (in this case, Shri Manjunath School of Nursing) are called "first-party cookies." Cookies set by parties other than the website owner are called "third-party cookies." Third-party cookies enable third-party features or functionality to be provided on or through the website (such as advertising, interactive content, and analytics).
+            Cookies set by the website owner (in this case, Shri Manjunath School of Nursing, Vaduj) are called "first-party cookies." Cookies set by parties other than the website owner are called "third-party cookies." Third-party cookies enable third-party features or functionality to be provided on or through the website (such as advertising, interactive content, and analytics).
           </p>
         </section>
         
@@ -104,7 +104,7 @@ export default function CookiePolicy() {
             If you have any questions about our use of cookies or other technologies, please contact us at:
           </p>
           <div className="mt-4">
-            <p><strong>Shri Manjunath School of Nursing</strong></p>
+            <p><strong>Shri Manjunath School of Nursing, Vaduj</strong></p>
             <p>Email: netajibose2018@gmail.com, shrimanjunath369@gmail.com</p>
             <p>Phone: +91 7385685431</p>
             <p>Phone: +91 7385425431</p>

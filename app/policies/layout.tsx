@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Policies | Shri Manjunath School of Nursing',
-  description: 'Important policies for Shri Manjunath School of Nursing',
+  title: 'Policies | Shri Manjunath School of Nursing, Vaduj',
+  description: 'Important policies for Shri Manjunath School of Nursing, Vaduj',
 };
 
 export default function PoliciesLayout({

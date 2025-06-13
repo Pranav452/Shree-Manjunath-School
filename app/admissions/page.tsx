@@ -2,8 +2,8 @@ import { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Admissions | Shri Manjunath School of Nursing",
-  description: "Information about admissions at Shri Manjunath School of Nursing",
+  title: "Admissions | Shri Manjunath School of Nursing, Vaduj",
+  description: "Information about admissions at Shri Manjunath School of Nursing, Vaduj",
 }
 
 export default function AdmissionsPage() {
@@ -14,7 +14,7 @@ export default function AdmissionsPage() {
       <section className="mb-12">
         <h2 className="text-2xl md:text-3xl font-bold mb-4">Application Process</h2>
         <p className="mb-6">
-          Information about the application process for Shri Manjunath School of Nursing will be available here, including application requirements, deadlines, and procedures.
+          Information about the application process for Shri Manjunath School of Nursing, Vaduj will be available here, including application requirements, deadlines, and procedures.
         </p>
       </section>
       

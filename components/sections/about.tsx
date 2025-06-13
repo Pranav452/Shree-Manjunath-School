@@ -18,7 +18,7 @@ export default function About() {
             className="w-full md:w-1/2"
           >
             <span className="text-amber-800 font-medium">Empowering</span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4">About Shri Manjunath School of Nursing</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4">About Shri Manjunath School of Nursing, Vaduj</h2>
             <div className="flex gap-4">
               <Link href="/programs">
                 <Button variant="outline" className="bg-gray-200 hover:bg-gray-300 border-0">
@@ -40,7 +40,7 @@ export default function About() {
             className="w-full md:w-1/2 space-y-6"
           >
             <p className="text-gray-700">
-              Shri Manjunath School of Nursing, operated by the Netaji Subhashchandra Bose Charitable Trust, is dedicated
+              Shri Manjunath School of Nursing, Vaduj, operated by the Netaji Subhashchandra Bose Charitable Trust, is dedicated
               to providing exceptional nursing education tailored for rural students. Our expert faculty, modern
               infrastructure, and hands-on training ensure that our graduates are well-prepared to meet the healthcare
               needs of their communities.

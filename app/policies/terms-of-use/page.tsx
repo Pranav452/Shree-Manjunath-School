@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Terms of Use | Shri Manjunath School of Nursing',
-  description: 'Terms of Use for Shri Manjunath School of Nursing',
+  title: 'Terms of Use | Shri Manjunath School of Nursing, Vaduj',
+  description: 'Terms of Use for Shri Manjunath School of Nursing, Vaduj',
 };
 
 export default function TermsOfUse() {
@@ -15,15 +15,15 @@ export default function TermsOfUse() {
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">Introduction</h2>
           <p>
-            Welcome to the Shri Manjunath School of Nursing website. These Terms of Use govern your access to and use of our website, services, and content. By accessing or using our website, you agree to be bound by these Terms of Use. If you do not agree to these terms, please do not use our website.
+            Welcome to the Shri Manjunath School of Nursing, Vaduj website. These Terms of Use govern your access to and use of our website, services, and content. By accessing or using our website, you agree to be bound by these Terms of Use. If you do not agree to these terms, please do not use our website.
           </p>
         </section>
         
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">Definitions</h2>
           <ul>
-            <li><strong>"School," "we," "us," or "our"</strong> refers to Shri Manjunath School of Nursing.</li>
-            <li><strong>"Website"</strong> refers to the website operated by Shri Manjunath School of Nursing accessible at shrimanjunathnursing.edu (this domain).</li>
+            <li><strong>"School," "we," "us," or "our"</strong> refers to Shri Manjunath School of Nursing, Vaduj.</li>
+            <li><strong>"Website"</strong> refers to the website operated by Shri Manjunath School of Nursing, Vaduj accessible at shrimanjunathnursing.edu (this domain).</li>
             <li><strong>"User," "you," or "your"</strong> refers to any individual or entity that accesses or uses our Website.</li>
             <li><strong>"Content"</strong> refers to all text, graphics, images, videos, data, and other materials on the Website.</li>
           </ul>
@@ -96,7 +96,7 @@ export default function TermsOfUse() {
             If you have any questions or concerns about these Terms of Use, please contact us at:
           </p>
           <div className="mt-4">
-            <p><strong>Shri Manjunath School of Nursing</strong></p>
+            <p><strong>Shri Manjunath School of Nursing, Vaduj</strong></p>
             <p>Email: netajibose2018@gmail.com, shrimanjunath369@gmail.com</p>
             <p>Phone: +91 7385685431</p>
             <p>Phone: +91 7385425431</p>

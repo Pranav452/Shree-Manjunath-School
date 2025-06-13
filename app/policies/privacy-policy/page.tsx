@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Shri Manjunath School of Nursing',
-  description: 'Privacy Policy for Shri Manjunath School of Nursing',
+  title: 'Privacy Policy | Shri Manjunath School of Nursing, Vaduj',
+  description: 'Privacy Policy for Shri Manjunath School of Nursing, Vaduj',
 };
 
 export default function PrivacyPolicy() {
@@ -15,7 +15,7 @@ export default function PrivacyPolicy() {
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">Introduction</h2>
           <p>
-            At Shri Manjunath School of Nursing ("we", "our", or "the School"), we respect your privacy and are committed to protecting your personal data. This privacy policy explains how we collect, use, process, and share your information when you visit our website, interact with us, or use our services.
+            At Shri Manjunath School of Nursing, Vaduj ("we", "our", or "the School"), we respect your privacy and are committed to protecting your personal data. This privacy policy explains how we collect, use, process, and share your information when you visit our website, interact with us, or use our services.
           </p>
         </section>
         
@@ -97,7 +97,7 @@ export default function PrivacyPolicy() {
             If you have any questions about this Privacy Policy or our data practices, please contact us at:
           </p>
           <div className="mt-4">
-            <p><strong>Shri Manjunath School of Nursing</strong></p>
+            <p><strong>Shri Manjunath School of Nursing, Vaduj</strong></p>
             <p>Email: netajibose2018@gmail.com, shrimanjunath369@gmail.com</p>
             <p>Phone: +91 7385685431</p>
             <p>Phone: +91 7385425431</p>

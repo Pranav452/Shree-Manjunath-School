@@ -30,7 +30,7 @@ export default function Hero() {
             Transform Your Passion into a Noble Nursing Career
           </h1>
           <p className="text-base mb-6">
-            At Shri Manjunath School of Nursing, we nurture the next generation of compassionate nurses through quality education and hands-on training. Our commitment empowers students from rural backgrounds to thrive in healthcare.
+            At Shri Manjunath School of Nursing, Vaduj, we nurture the next generation of compassionate nurses through quality education and hands-on training. Our commitment empowers students from rural backgrounds to thrive in healthcare.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link href="/contact">

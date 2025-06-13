@@ -12,7 +12,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Shri Manjunath School of Nursing",
+  title: "Shri Manjunath School of Nursing, Vaduj",
   description: "Nurturing the next generation of compassionate nurses through quality education and hands-on training.",
     generator: 'v0.dev'
 }

@@ -1,8 +1,8 @@
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "About Us | Shri Manjunath School of Nursing",
-  description: "Learn about the history, mission and values of Shri Manjunath School of Nursing",
+  title: "About Us | Shri Manjunath School of Nursing, Vaduj",
+  description: "Learn about the history, mission and values of Shri Manjunath School of Nursing, Vaduj",
 }
 
 export default function AboutPage() {
@@ -13,7 +13,7 @@ export default function AboutPage() {
       <section className="mb-12">
         <h2 className="text-2xl md:text-3xl font-bold mb-4">Our Story</h2>
         <p className="mb-4">
-          Shri Manjunath School of Nursing was established with a vision to create healthcare professionals who combine technical excellence with compassionate care. 
+          Shri Manjunath School of Nursing, Vaduj was established with a vision to create healthcare professionals who combine technical excellence with compassionate care. 
           Founded in 2024-25, our institution has grown to become a leading center for nursing education in the region, addressing the critical need for skilled nursing professionals.
         </p>
        
