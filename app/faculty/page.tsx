@@ -1,9 +1,8 @@
 import { Metadata } from "next"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import Image from "next/image"
+import BoardMembersClient from "@/components/board-members-client"
 
 export const metadata: Metadata = {
-  title: "Board Members | Shri Manjunath School of Nursing, Vaduj",
+  title: "Board Members | Shri Manjunath School of Nursing",
   description: "Meet our experienced and dedicated Board members",
 }
 
@@ -24,6 +23,7 @@ const facultyMembers: FacultyMember[] = [
     position: "President",
     qualifications: ["Production Engineer"],
     work: ["ONGC (10 years)", "Fire & Safety Institute (Since 2007)"],
+    imageUrl: "/board-members/sachim-mane.jpg",
   },
   // Vice President
   {
@@ -36,6 +36,7 @@ const facultyMembers: FacultyMember[] = [
     name: "Monica Sachin Mane",
     position: "Secretary",
     qualifications: ["M.Sc (Microbiology)"],
+    imageUrl: "/board-members/Mrs-monica.jpg",
   },
   // Treasurer
   {
@@ -59,13 +60,14 @@ const facultyMembers: FacultyMember[] = [
       "Administrative Operations in Educational Institutions",
       "Community Development and Women Empowerment Programs"
     ],
-    imageUrl: "/bharati-mane.jpg",
+    imageUrl: "/board-members/Bharati-mane.jpg",
   },
   {
     name: "Moh. Irfan Ali Sheikh",
     position: "Director",
     qualifications: ["B.Sc"],
     work: ["Working in Abu Dhabi (UAE)"],
+    imageUrl: "/board-members/Moh-Irfan-Ali-Sheikh.jpg",
   },
   {
     name: "Shrikant Dipak Sathe",
@@ -77,11 +79,13 @@ const facultyMembers: FacultyMember[] = [
     name: "Dr. Mahesh Jagannath Kakade",
     position: "Director",
     qualifications: ["MBBS", "DCH"],
+    imageUrl: "/board-members/Dr-mahesh.jpg",
   },
   {
     name: "Dr. Viraj Anil Jagdale",
     position: "Director",
     qualifications: ["BAMS", "PEDIEMS"],
+    imageUrl: "/board-members/Dr-Viraj.jpg",
   },
   {
     name: "Vijaykumar Laxman Mane",
@@ -92,6 +96,7 @@ const facultyMembers: FacultyMember[] = [
     name: "Dadaso Mauti Pisal",
     position: "Director",
     qualifications: ["B.Sc in Agriculture"],
+    imageUrl: "/board-members/Dadaso-Mauti-Pisal.jpg",
   },
 ];
 
@@ -105,62 +110,7 @@ export default function FacultyPage() {
         Each Board member is committed to supporting our students in their journey to becoming skilled nursing professionals.
       </p>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {facultyMembers.map((member, index) => (
-          <Card key={index} className="hover:shadow-lg transition-shadow">
-           
-            <CardHeader className="pb-2">
-              <CardTitle className="text-xl text-amber-800">{member.name}</CardTitle>
-              <p className="font-medium text-gray-700">{member.position}</p>
-            </CardHeader>
-            <CardContent>
-              {member.qualifications.length > 0 && (
-                <div className="mb-2">
-                  <h4 className="text-sm font-semibold">Qualifications</h4>
-                  <ul className="list-disc list-inside text-sm text-gray-600">
-                    {member.qualifications.map((qual, idx) => (
-                      <li key={idx}>{qual}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-              
-              {member.education && member.education.length > 0 && (
-                <div className="mb-2">
-                  <h4 className="text-sm font-semibold">Education</h4>
-                  <ul className="list-disc list-inside text-sm text-gray-600">
-                    {member.education.map((edu, idx) => (
-                      <li key={idx}>{edu}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-              
-              {member.experience && member.experience.length > 0 && (
-                <div className="mb-2">
-                  <h4 className="text-sm font-semibold">Experience</h4>
-                  <ul className="list-disc list-inside text-sm text-gray-600">
-                    {member.experience.map((exp, idx) => (
-                      <li key={idx}>{exp}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-              
-              {member.work && member.work.length > 0 && (
-                <div>
-                  <h4 className="text-sm font-semibold">Work Experience</h4>
-                  <ul className="list-disc list-inside text-sm text-gray-600">
-                    {member.work.map((work, idx) => (
-                      <li key={idx}>{work}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </CardContent>
-          </Card>
-        ))}
-      </div>
+      <BoardMembersClient facultyMembers={facultyMembers} />
     </main>
   );
 } 
